@@ -1,0 +1,145 @@
+@charset 'UTF-8';
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+
+    position: relative;
+
+    max-width: 1024px;
+    margin: auto;
+
+    transition: background-color.2s cubic-bezier(.164,.84,.44,1);
+
+    color: #fff;
+    background-color: #000;
+}
+
+body[theme='dark']
+{
+    color: #fff;
+    background-color: #000;
+}
+
+body[theme='light']
+{
+    color: #000e;
+    background-color: #eee;
+}
+
+body[theme='coffee']
+{
+    color: #7d5a5a;
+    background-color: #f3e1e1;
+}
+body[theme='indigo']
+{
+    color: #dae1e7;
+    background-color: #142850;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+.header
+{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+
+    border-bottom: 1px solid #8882;
+}
+
+.header-logo
+{
+    font-size: 24px;
+    font-weight: 500;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    transition: all .2s cubic-bezier(.164,.84,.44,1);
+    text-decoration: none;
+
+    opacity: .7;
+    color: currentColor;
+}
+
+.header-logo svg
+{
+    width: 32px;
+    height: 32px;
+    padding-right: 12px;
+}
+.header-logo:hover
+{
+    opacity: 1;
+}
+
+.header-nav
+{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.header-nav .tab
+{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 48px;
+
+    position: relative;
+
+    display: inline-block;
+    flex: 0;
+
+    padding: 0 12px;
+
+    transition: all .2s cubic-bezier(.164,.84,.44,1);
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: .5;
+    color: currentColor;
+}
+
+.header-nav .tab::after
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
+    transition: transform .2s cubic-bezier(.164,.84,.44,1);
+    transform: scaleX(0);
+    transform-origin: right center;
+    pointer-events: none;
+
+    background-color: currentColor;
+}
+
+.header-nav .tab:hover::after
+{
+    transform: scale(1);
+    transform-origin: left center;
+}
+.header-nav .tab:hover
+{
+    opacity: 1;
+    color: currentColor;
+}
