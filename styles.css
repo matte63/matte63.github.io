@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+
+@import "css/buttons.css";
+@import "css/icons.css";
+@import "css/typography.css";
+@import "css/header.css";
+
+body {
+  position: relative;
+
+  max-width: 768px;
+  margin: auto;
+
+  transition: background-color.2s cubic-bezier(0.164, 0.84, 0.44, 1);
+
+  color: #fff;
+  background-color: #000;
+
+}
+
+body[theme="dark"] {
+  color: #fff;
+  background-color: #000;
+}
+
+body[theme="light"] {
+  color: #000e;
+  background-color: #eee;
+}
+
+body[theme="coffee"] {
+  color: #7d5a5a;
+  background-color: #f3e1e1;
+}
+
+body[theme="indigo"] {
+  color: #dae1e7;
+  background-color: #142850;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
