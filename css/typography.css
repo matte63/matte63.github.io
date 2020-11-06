@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/icon?family=Shrikhand|Open+Sans');
+
+
+html, body {
+	font-family: 'Open Sans', 'Roboto', sans-serif;
+}
+
+article {
+	overflow: hidden;
+
+	box-sizing: border-box;
+	max-width: 512px;
+	margin: 0;
+	padding: 0 24px;
+}
+
+::selection {
+	background-color: #8884;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+
+	letter-spacing: -1.5px;
+
+	font-family: "Shrikhand";
+	font-size: 95px;
+	font-weight: 400;
+	line-height: normal;
+
+	-webkit-text-fill-color: #0000;
+	-webkit-text-stroke: 1px currentColor;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+
+	letter-spacing: -0.5px;
+
+	opacity: 0.4;
+
+	font-family:  "Shrikhand";
+	font-size: 59px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+h3 {
+	margin: 0;
+	padding: 0;
+
+	letter-spacing: 0;
+
+	font-family:  "Shrikhand";
+	font-size: 48px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+h4 {
+	margin: 0;
+	padding: 0;
+
+	letter-spacing: 0.25px;
+
+	font-family:  "Shrikhand";
+	font-size: 34px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+h5 {
+	margin: 0;
+	padding: 0;
+
+	letter-spacing: 0;
+
+	font-family:  "Shrikhand";
+	font-size: 24px;
+	font-weight: 400;
+	line-height: normal;
+}
+
+h6 {
+	margin: 0;
+	padding: 0;
+
+	letter-spacing: 0.15px;
+
+	font-family:  "Shrikhand";
+	font-size: 20px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: opacity ease-in-out .2s;
+
+}
+
+p {
+	margin: 8px 0;
+	padding: 0;
+
+	letter-spacing: 0.25px;
+
+	opacity: 0.87;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+hr {
+	width: 128px;
+	height: 1px;
+	margin-right: auto;
+	margin-left: 0;
+
+	opacity: 0.2;
+	background-color: #ffff;
+}

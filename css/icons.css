@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.icon {
+	display: inline-block;
+
+	white-space: nowrap;
+	letter-spacing: normal;
+	text-transform: none;
+	word-wrap: normal;
+
+	opacity: 0.5;
+	color: currentColor;
+
+	font-family: 'Material Icons';
+	font-size: 24px;  /* icon size */
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+	direction: ltr;
+}

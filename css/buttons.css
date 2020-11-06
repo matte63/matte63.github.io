@@ -1,0 +1,89 @@
+
+.buttons {
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+	flex-grow: 0;
+	justify-content: flex-end;
+
+	margin: 24px 0;
+
+	text-align:
+
+	flex-basis: auto;
+}
+
+button {
+	position: relative;
+
+	display: inline-block;
+	overflow: hidden;
+
+	min-width: 64px;
+	margin-right: 8px;
+	padding: 0 16px;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	letter-spacing: 1.25px;
+	text-transform: uppercase;
+
+	color: currentColor;
+	border: none;
+	border-radius: 3px;
+	background: none;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 36px;
+}
+
+button::after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	content: '';
+	transition: opacity .2s ease-in-out;
+
+	opacity: 0;
+	background: currentColor;
+}
+
+button:hover::after {
+	opacity: 0.04;
+}
+
+button:active::after {
+	opacity: 0.08;
+}
+button:disabled {
+	opacity: 0.5;
+}
+button:disabled::after {
+	display: none;
+}
+
+button:last-child {
+	border: 1px solid #8884;
+}
+
+button.icon {
+	width: 64px;
+	height: 64px;
+	padding: 0;
+
+	border: none;
+	border-radius: 50%;
+
+	font-size: 32px;
+}
