@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Excuses</title>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap"
+          rel="stylesheet">
+    <script type="text/javascript">
+      function excuse_generator() {
+        var e = '';
+
+        e = excuses.intro[Math.floor(Math.random() * excuses.intro.length)] + ' ' + excuses.scapegoat[Math.floor(Math.random() * excuses.scapegoat.length)] + ' ' + excuses.delay[Math.floor(Math.random() * excuses.delay.length)] + '.';
+
+        return e;
+      }
+
+      function a() {
+        var s = excuse_generator()
+
+        document.getElementById('id').innerHTML = s;
+        console.log(s);
+
+      }
+
+      function c() {
+
+      }
+
+      var excuses = {
+        intro: ['Sorry I can\'t come',
+          'Please forgive my absence',
+          'This is going to sound crazy but',
+          'Get this:',
+          'I can\'t go because',
+          'I know you\'re going to hate me but',
+          'I was minding my own business and boom!',
+          'I feel terrible but',
+          'I regretfully cannot attend',
+          'This is going to sound like an excuse but'
+        ],
+        scapegoat: ['my nephew',
+          'the ghost of Hitler',
+          'the Pope',
+          'my ex',
+          'a high school marching band',
+          'Dan Rather',
+          'a sad clown',
+          'the kid from Air Bud',
+          'a professional cricket team',
+          'my Tinder date'
+        ],
+        delay: ['just shit the bed',
+          'died in front of me',
+          'won\'t stop telling me knock knock jokes',
+          'is having a nervous breakdown',
+          'gave me syphilis',
+          'poured lemonade in my gas tank',
+          'stabbed me',
+          'found my box of human teeth',
+          'stole my bicycle',
+          'posted my nudes on Instagram'
+        ]
+      };
+
+    </script>
+    <style media="screen">
+      body,
+      html {
+        color: #fff;
+        background: #000;
+        font-family: 'Roboto', sans-serif;
+        margin: auto;
+        max-width: 512px;
+      }
+
+      h1 {
+        margin: 96px 8px 24px;
+        font-weight: 400;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      h1::after {
+        content: '¬';
+        opacity: .5;
+      }
+
+      p#id {
+        margin: 8px;
+        opacity: .7;
+        position: relative;
+        font-size: 24px;
+        min-height: 96px;
+        border-bottom: solid 1px #8882;
+      }
+
+      button {
+        user-select: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 8px;
+        border: none;
+        border-radius: 3px;
+        color: currentColor;
+        background: #0000;
+        text-transform: uppercase;
+        overflow: hidden;
+        position: relative;
+        margin: 4px;
+      }
+
+      button:disabled {
+        cursor: auto;
+        opacity: .5;
+      }
+
+      button:disabled:hover::after {
+        opacity: 0;
+      }
+
+      button::after {
+        background: currentColor;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: ease-in-out .2s opacity;
+      }
+
+      button:hover::after {
+        opacity: .08;
+      }
+
+    </style>
+  </head>
+
+  <body onload="a()">
+    <h1>Excuses</h1>
+    <p id="id"></p>
+    <button type="button"
+            name="button"
+            onclick="a()">Update</button>
+    <button type="button"
+            name="button"
+            onclick="c()"
+            disabled>Copy</button>
+  </body>
+
+</html>
